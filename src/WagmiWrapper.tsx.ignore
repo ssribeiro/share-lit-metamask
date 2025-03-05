@@ -1,0 +1,16 @@
+import { WagmiProvider } from "wagmi";
+import { config } from "./helpers.ignore/wagmi-config.ts.ignore";
+import App from "./App";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
+const WagmiWrapper = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  );
+};
+
+export default WagmiWrapper;

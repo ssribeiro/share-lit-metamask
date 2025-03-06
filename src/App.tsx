@@ -134,7 +134,7 @@ const App = () => {
   const getPrice = async () => {
     const litClient = new LitNodeClient({
       alertWhenUnauthorized: false,
-      litNetwork,
+      litNetwork: LIT_NETWORK.DatilTest,
       debug: false,
     });
     await litClient.connect();
